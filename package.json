@@ -2,25 +2,30 @@
   "name": "cultofthemagi-blog",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev --turbo",
-  "build": "next build",
-  "start": "next start",
-  "lint": "biome lint ./src",
-  "format": "biome format --write ./src"
-},
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome lint ./src",
+    "format": "biome format --write ./src",
+    "fix": "biome check --write ./src"
+  },
   "dependencies": {
-    "next": "15.3.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.7.10",
+    "next": "^14.2.4",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.1",
-    "@tailwindcss/postcss": "^4",
+    "@biomejs/biome": "^2.1.1",
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "tailwindcss": "^4",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5"
   }
 }
