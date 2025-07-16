@@ -1,0 +1,17 @@
+---
+title: 'Gerenciando Estado em Aplicações React'
+date: '2025-07-16'
+summary: 'useState é ótimo, mas e quando a aplicação cresce? Explorando as diferenças entre Context API, Zustand e Redux para um gerenciamento de estado robusto.'
+---
+
+## A Evolução do Estado
+
+Quando começamos com React, `useState` é suficiente para tudo. No entanto, à medida que os componentes se aninham, passar props por múltiplos níveis se torna tedioso. É o que chamamos de "prop drilling".
+
+Para resolver isso, temos algumas ferramentas de **gerenciamento de estado global**:
+
+- **Context API**: Já vem com o React. Ótima para dados que não mudam com frequência, como tema (claro/escuro) ou informações de usuário.
+- **Zustand**: Uma biblioteca leve e moderna que usa uma abordagem simples com hooks. É muito fácil de aprender e poderosa.
+- **Redux**: A solução mais robusta e antiga, ideal para aplicações muito complexas com um fluxo de dados bem definido.
+
+A escolha depende da complexidade do seu projeto. Para a maioria dos casos hoje em dia, começar com Context API e evoluir para Zustand é um ótimo caminho.

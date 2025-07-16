@@ -1,0 +1,23 @@
+---
+title: 'Deploy Simplificado: Subindo seu Site Next.js na Vercel'
+date: '2025-07-18'
+category:
+summary: "Do 'git push' ao site no ar em segundos. Entenda o fluxo de CI/CD da Vercel e por que ela é considerada a casa oficial do Next.js."
+author:
+  name: 'The Mage King'
+  picture: '/images/author/me.jpg' # Caminho para a foto do autor
+
+---
+
+## O que é CI/CD?
+
+CI/CD significa **Integração Contínua** e **Entrega Contínua** (ou Deploy Contínuo). É um processo automatizado que pega o código do seu repositório, constrói o projeto e o publica na web.
+
+A Vercel faz isso de forma brilhante:
+
+1.  **Conexão com o Git**: Você conecta seu repositório do GitHub.
+2.  **Gatilho de Push**: Cada `git push` para a branch `main` dispara um novo build.
+3.  **Build e Deploy**: A Vercel instala as dependências (`npm install`), constrói o site (`npm run build`) e o coloca no ar.
+4.  **Preview Deploys**: Um push para qualquer outra branch gera uma URL de preview para testes.
+
+Esse fluxo automatizado remove o trabalho manual e garante que seu site esteja sempre atualizado com a última versão do seu código.

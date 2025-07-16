@@ -17,11 +17,13 @@
 body {
     color: var(--foreground);
     background: var(--background);
+    font-family: var(--font-editorial);
 }
 
 
 /* Nossos estilos manuais para o conteúdo do blog (substituindo o plugin "prose") */
 .prose-content h1, .prose-content h2, .prose-content h3 {
+  font-family: var(--font-awesome);
   @apply font-bold mb-4 mt-6;
 }
 .prose-content h1 { @apply text-4xl; }
@@ -33,11 +35,16 @@ body {
 }
 
 .prose-content ul {
-  @apply list-disc list-inside mb-6 pl-4; /* Cria a lista com bolinhas */
+  @apply list-none mb-6 pl-6; /* Remove o marcador padrão e adiciona padding à esquerda */
 }
 
-.prose-content li {
-  @apply mb-2;
+.prose-content ul > li::before {
+  content: "⬥"; /* Use o caractere que você preferir (✦, ✨, ▸, 🟆, ◆, ⬥, etc.) */
+  color: theme('colors.gray.400'); /* Cor do marcador (ajuste conforme necessário) */
+  font-size: 0.8em; /* Tamanho do marcador (ajuste conforme necessário) */
+  margin-left: -1.5em; /* Alinha o marcador para fora do texto */
+  margin-right: 0.5em; /* Espaçamento entre o marcador e o texto */
+  vertical-align: middle; /* Alinha verticalmente o marcador */
 }
 
 .prose-content strong {

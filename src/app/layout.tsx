@@ -1,26 +1,63 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Importa a fonte padrão 'Inter'
+import localFont from 'next/font/local';
 import "./globals.css";
 
-// Inicializa a fonte Inter
-const inter = Inter({ subsets: ["latin"] });
+// --- Fonte para TÍTULOS ---
+const awesome = localFont({
+  src: [
+    {
+      path: '../fonts/awesome/AwesomeSerif-BoldExtraTall.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/awesome/AwesomeSerif-ExtraTall.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-awesome',
+});
 
-// Aproveitei para melhorar os metadados do seu site
+// --- Fonte para TEXTO ---
+const editorial = localFont({
+  src: [
+    {
+      path: '../fonts/editorialtoday/EditorialToday-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/editorialtoday/EditorialToday-Italic.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../fonts/editorialtoday/EditorialToday-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/editorialtoday/EditorialToday-BoldItalic.woff2',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-editorial',
+});
+
 export const metadata: Metadata = {
   title: "Cult of the Magi - Blog",
   description: "Um blog sobre os mistérios da magia.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
-    // Aproveitei para mudar a língua para português
     <html lang="pt-BR">
-      {/* Aplica a classe da fonte diretamente no body */}
-      <body className={inter.className}>{children}</body>
+      {/* Aplica as DUAS variáveis de fonte no body */}
+      <body className={`${awesome.variable} ${editorial.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
