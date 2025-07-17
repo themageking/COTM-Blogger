@@ -1,60 +1,57 @@
 @import "tailwindcss";
 
-/* Configuração de variáveis para o tema claro e escuro */
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+@theme {
+
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.333333;
+  
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+
+  --text-lg: 1.5rem;
+  --text-lg--line-height: 1.333333;
+  
+  --text-xl: 2.25rem;
+  --text-xl--line-height: 1.222222;
+  
+  --text-2xl: 3.5rem;
+  --text-2xl--line-height: 1.142857;
+
+  --text-3xl: 4.5rem;
+  --text-3xl--line-height: 1.111111;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
+  @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+      --color-background: #0a0a0a;
+      --color-foreground: #ededed;
     }
-}
+  }
 
-/* Estilos base para o corpo da página */
-body {
-    color: var(--foreground);
-    background: var(--background);
+  body {
+    @apply bg-background text-foreground; 
     font-family: var(--font-editorial);
-}
+  }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-awesome);
+    @apply font-bold mt-8 mb-4;
+  }
 
-/* Nossos estilos manuais para o conteúdo do blog (substituindo o plugin "prose") */
-.prose-content h1, .prose-content h2, .prose-content h3 {
-  font-family: var(--font-awesome);
-  @apply font-bold mb-4 mt-6;
-}
-.prose-content h1 { @apply text-4xl; }
-.prose-content h2 { @apply text-3xl; }
-.prose-content h3 { @apply text-2xl; }
-
-.prose-content p {
-  @apply leading-relaxed mb-6; /* Melhora o espaçamento entre linhas e parágrafos */
-}
-
-.prose-content ul {
-  @apply list-none mb-6 pl-6; /* Remove o marcador padrão e adiciona padding à esquerda */
-}
-
-.prose-content ul > li::before {
-  content: "⬥"; /* Use o caractere que você preferir (✦, ✨, ▸, 🟆, ◆, ⬥, etc.) */
-  color: theme('colors.gray.400'); /* Cor do marcador (ajuste conforme necessário) */
-  font-size: 0.8em; /* Tamanho do marcador (ajuste conforme necessário) */
-  margin-left: -1.5em; /* Alinha o marcador para fora do texto */
-  margin-right: 0.5em; /* Espaçamento entre o marcador e o texto */
-  vertical-align: middle; /* Alinha verticalmente o marcador */
-}
-
-.prose-content strong {
-  @apply font-bold;
-}
-
-.prose-content em {
-  @apply italic;
-}
-
-.prose-content a {
-  @apply text-blue-400 underline hover:text-blue-300; /* Estiliza os links */
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  p {
+    @apply text-base;
+  }
 }

@@ -15,11 +15,14 @@ export default async function PostPage({ params: { slug } }: { params: { slug: s
     });
 
     return (
-      <article className="prose-content max-w-3xl mx-auto p-4 md:p-8">
-        <h1 className="text-4xl font-bold mb-2">{frontmatter.title}</h1>
-        <p className="text-gray-400 mb-8">{frontmatter.date}</p>
-        {content}
-      </article>
+// Antes
+// Depois (Corrigido)
+<article className="prose-content max-w-3xl mx-auto p-4 md:p-8">
+  {/* Removemos as classes daqui! Agora ele pega o estilo de .prose-content h1 */}
+  <h1>{frontmatter.title}</h1>
+  <p className="text-gray-400 mb-8">{frontmatter.date}</p>
+  {content}
+</article>
     );
   } catch (_error) {
     return <div>Post não encontrado.</div>;

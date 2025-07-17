@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Link from "next/link";
+import BlogPostCard from "../../components/BlogPostCard";
+
 
 export default function BlogPage() {
 	const postsDirectory = path.join(process.cwd(), "posts");
@@ -24,17 +25,11 @@ export default function BlogPage() {
 		<div className="max-w-3xl mx-auto p-4">
 			<h1 className="text-4xl font-bold mb-8">Meu Blog</h1>
 			<ul className="space-y-4">
-				{posts.map((post) => (
-					<li
-						key={post.slug}
-						className="p-4 border rounded-lg hover:bg-gray-100"
-					>
-						<Link href={`/blog/${post.slug}`} className="block">
-							<h2 className="text-2xl font-semibold">{post.title}</h2>
-							<p className="text-gray-600 mt-2">{post.summary}</p>
-						</Link>
-					</li>
-				))}
+				{posts.map((post) => {
+					return (
+						<BlogPostCard key={post.slug} slug={post.slug} title={post.title} summary={post.summary} />
+					);
+				})}
 			</ul>
 		</div>
 	);

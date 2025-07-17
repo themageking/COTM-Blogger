@@ -1,3 +1,4 @@
+// tailwind.config.ts - Versão Final e Limpa para v4
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -6,16 +7,8 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        // Adicione esta linha
-        awesome: ['var(--font-awesome)'],
-        editorial: ['var(--font-editorial)'],
-      },
-    },
-  },
-  plugins: [
-  ],
+  // A seção 'theme' pode ficar vazia ou ser removida se não houver outras customizações.
+  theme: {},
+  plugins: [],
 }
 export default config

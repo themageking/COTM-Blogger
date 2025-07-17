@@ -1,23 +1,32 @@
 ---
-title: 'Deploy Simplificado: Subindo seu Site Next.js na Vercel'
-date: '2025-07-18'
-category:
-summary: "Do 'git push' ao site no ar em segundos. Entenda o fluxo de CI/CD da Vercel e por que ela é considerada a casa oficial do Next.js."
+title: "O Guia Essencial de Ritmo Vertical no CSS"
+summary: "Aprenda a criar layouts mais harmoniosos e legíveis dominando o ritmo vertical, a técnica de espaçamento que alinha todos os seus elementos a uma grade invisível."
+coverImage: "/images/blog/ritmo-vertical-css/cover.jpg"
+date: "2025-07-16"
+category: "CSS"
+tags: ["Design", "CSS", "Frontend", "UI/UX"]
+slug: "guia-ritmo-vertical-css"
 author:
-  name: 'The Mage King'
-  picture: '/images/author/me.jpg' # Caminho para a foto do autor
-
+  name: "Alexandre G."
+  picture: "/images/authors/alexandre.jpg"
 ---
 
-## O que é CI/CD?
+## O que é Ritmo Vertical?
 
-CI/CD significa **Integração Contínua** e **Entrega Contínua** (ou Deploy Contínuo). É um processo automatizado que pega o código do seu repositório, constrói o projeto e o publica na web.
+Você já olhou para uma página e sentiu que, mesmo sem saber o porquê, tudo parecia perfeitamente alinhado e agradável aos olhos? A chance de isso ser obra do **ritmo vertical** é enorme.
 
-A Vercel faz isso de forma brilhante:
+Ritmo vertical é uma técnica de design que busca criar consistência e harmonia no espaçamento vertical de uma página. A ideia é simples: todos os elementos e seus espaçamentos (tamanhos de fonte, altura de linha, margens, paddings) devem ser múltiplos de uma unidade base comum. Isso cria uma "grade" invisível na qual o texto e os elementos "pousam", resultando em um layout coeso e profissional.
 
-1.  **Conexão com o Git**: Você conecta seu repositório do GitHub.
-2.  **Gatilho de Push**: Cada `git push` para a branch `main` dispara um novo build.
-3.  **Build e Deploy**: A Vercel instala as dependências (`npm install`), constrói o site (`npm run build`) e o coloca no ar.
-4.  **Preview Deploys**: Um push para qualquer outra branch gera uma URL de preview para testes.
+## A Base de Tudo: O `line-height`
 
-Esse fluxo automatizado remove o trabalho manual e garante que seu site esteja sempre atualizado com a última versão do seu código.
+O coração do ritmo vertical está no texto. A primeira e mais importante decisão é definir um `line-height` (altura da linha) base para o corpo do seu texto que seja um número fácil de trabalhar.
+
+Um padrão de ouro na web é usar uma fonte base de **`16px`** com um `line-height` de **`24px`**.
+
+Nosso número mágico, nossa unidade base, será **24**.
+
+```css
+body {
+  font-size: 16px;
+  line-height: 24px; /* Nossa unidade base! */
+}
