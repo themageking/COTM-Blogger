@@ -1,81 +1,89 @@
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-Italic.woff2') format('woff2'),
-        url('EditorialToday-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-Italic.woff2") format("woff2"),
+		url("EditorialToday-Italic.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-SemiBold.woff2') format('woff2'),
-        url('EditorialToday-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-SemiBold.woff2") format("woff2"),
+		url("EditorialToday-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-Regular.woff2') format('woff2'),
-        url('EditorialToday-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-Regular.woff2") format("woff2"),
+		url("EditorialToday-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-BoldItalic.woff2') format('woff2'),
-        url('EditorialToday-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-BoldItalic.woff2") format("woff2"),
+		url("EditorialToday-BoldItalic.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-Bold.woff2') format('woff2'),
-        url('EditorialToday-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-Bold.woff2") format("woff2"),
+		url("EditorialToday-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-ExtBdIta.woff2') format('woff2'),
-        url('EditorialToday-ExtBdIta.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-ExtBdIta.woff2") format("woff2"),
+		url("EditorialToday-ExtBdIta.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-ExtraBold.woff2') format('woff2'),
-        url('EditorialToday-ExtraBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-ExtraBold.woff2") format("woff2"),
+		url("EditorialToday-ExtraBold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-ThinItalic.woff2') format('woff2'),
-        url('EditorialToday-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-ThinItalic.woff2") format("woff2"),
+		url("EditorialToday-ThinItalic.woff") format("woff");
+	font-weight: 100;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Editorial Today';
-    src: url('EditorialToday-Thin.woff2') format('woff2'),
-        url('EditorialToday-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Editorial Today";
+	src:
+		url("EditorialToday-Thin.woff2") format("woff2"),
+		url("EditorialToday-Thin.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
 }
-

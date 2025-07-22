@@ -1,135 +1,149 @@
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-BdRegular.woff2') format('woff2'),
-        url('AwesomeSerifItalic-BdRegular.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-BdRegular.woff2") format("woff2"),
+		url("AwesomeSerifItalic-BdRegular.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-BdExraTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-BdExraTall.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-BdExraTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-BdExraTall.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-BoldTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-BoldTall.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-BoldTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-BoldTall.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-SemBdTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-SemBdTall.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-SemBdTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-SemBdTall.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-LightReg.woff2') format('woff2'),
-        url('AwesomeSerifItalic-LightReg.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-LightReg.woff2") format("woff2"),
+		url("AwesomeSerifItalic-LightReg.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-Regular.woff2') format('woff2'),
-        url('AwesomeSerifItalic-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-Regular.woff2") format("woff2"),
+		url("AwesomeSerifItalic-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-MedRegular.woff2') format('woff2'),
-        url('AwesomeSerifItalic-MedRegular.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-MedRegular.woff2") format("woff2"),
+		url("AwesomeSerifItalic-MedRegular.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-MediumTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-MediumTall.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-MediumTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-MediumTall.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-LtExraTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-LtExraTall.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-LtExraTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-LtExraTall.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-MdExraTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-MdExraTall.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-MdExraTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-MdExraTall.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-ExtraTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-ExtraTall.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-ExtraTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-ExtraTall.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-LightTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-LightTall.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-LightTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-LightTall.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-Tall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-Tall.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-Tall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-Tall.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-SmRegular.woff2') format('woff2'),
-        url('AwesomeSerifItalic-SmRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-SmRegular.woff2") format("woff2"),
+		url("AwesomeSerifItalic-SmRegular.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Awesome Serif';
-    src: url('AwesomeSerifItalic-SmExraTall.woff2') format('woff2'),
-        url('AwesomeSerifItalic-SmExraTall.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Awesome Serif";
+	src:
+		url("AwesomeSerifItalic-SmExraTall.woff2") format("woff2"),
+		url("AwesomeSerifItalic-SmExraTall.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
-

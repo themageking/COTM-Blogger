@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "biome lint ./src",
     "format": "biome format --write ./src",
-    "fix": "biome check --write ./src"
+    "fix": "biome check --write --unsafe ./src"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -16,7 +16,10 @@
     "next": "^14.2.4",
     "next-mdx-remote": "^5.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "rehype-pretty-code": "^0.14.1",
+    "remark-gfm": "^4.0.1",
+    "shiki": "^3.8.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.1",
