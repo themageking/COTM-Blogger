@@ -4,5 +4,9 @@
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 32,
+"editor.formatOnSave": true,
 }

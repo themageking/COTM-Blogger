@@ -2,33 +2,39 @@
 
 @theme {
 
-  --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-background: oklch(0.045 0 0);
+  --color-foreground: oklch(0.891 0 0);
 
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.333333;
-  
   --text-base: 1rem;
   --text-base--line-height: 1.5;
-
   --text-lg: 1.5rem;
   --text-lg--line-height: 1.333333;
-  
   --text-xl: 2.25rem;
   --text-xl--line-height: 1.222222;
-  
   --text-2xl: 3.5rem;
   --text-2xl--line-height: 1.142857;
-
   --text-3xl: 4.5rem;
   --text-3xl--line-height: 1.111111;
+
+--color-gray-50: oklch(0.045 0 0);
+  --color-gray-100: oklch(0.125 0 0);
+  --color-gray-200: oklch(0.222 0 0);
+  --color-gray-300: oklch(0.318 0 0);
+  --color-gray-400: oklch(0.462 0 0);
+  --color-gray-500: oklch(0.667 0 0);
+  --color-gray-600: oklch(0.761 0 0);
+  --color-gray-700: oklch(0.891 0 0);
+  --color-gray-800: oklch(0.942 0 0);
+  --color-gray-900: oklch(0.981 0 0);
+  --color-gray-950: oklch(0.992 0 0);
 }
 
 @layer base {
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-background: #0a0a0a;
-      --color-foreground: #ededed;
+
     }
   }
 
@@ -39,6 +45,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-awesome);
+    color: var(--color-gray-900);
     @apply font-bold mt-8 mb-4;
   }
 
