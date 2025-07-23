@@ -6,15 +6,6 @@
 	"editor.quickSuggestions": {
 		"strings": true
 	},
-	"editor.fontFamily": "JetBrains Mono",
-	"editor.fontSize": 16,
-	"editor.lineHeight": 32,
-	"editor.minimap.enabled": false,
-
-	// --- Configurações para o Biome (ADICIONE ISTO) ---
-
-	// 1. Habilita o "formatar ao salvar" (você já tem, o que é ótimo!)
-	"editor.formatOnSave": true,
 
 	// 2. Define o Biome como o formatador padrão para os tipos de arquivo suportados
 	// Esta é a parte mais importante que estava faltando.

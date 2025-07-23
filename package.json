@@ -1,34 +1,35 @@
 {
-  "name": "cultofthemagi-blog",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
-    "lint": "biome lint ./src",
-    "format": "biome format --write ./src",
-    "fix": "biome check --write --unsafe ./src"
-  },
-  "dependencies": {
-    "gray-matter": "^4.0.3",
-    "markdown-to-jsx": "^7.7.10",
-    "next": "^14.2.4",
-    "next-mdx-remote": "^5.0.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "rehype-pretty-code": "^0.14.1",
-    "remark-gfm": "^4.0.1",
-    "shiki": "^3.8.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.1.1",
-    "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "^20.19.8",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.21",
-    "tailwindcss": "^4.0.0",
-    "typescript": "^5"
-  }
+	"name": "cultofthemagi-blog",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbo",
+		"build": "next build",
+		"start": "next start",
+		"lint": "biome lint ./src",
+		"format": "biome format --write ./src",
+		"fix": "biome check --write --unsafe ./src"
+	},
+	"dependencies": {
+		"framer-motion": "^12.23.6",
+		"gray-matter": "^4.0.3",
+		"markdown-to-jsx": "^7.7.10",
+		"next": "^14.2.30",
+		"next-mdx-remote": "^5.0.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"rehype-pretty-code": "^0.14.1",
+		"remark-gfm": "^4.0.1",
+		"shiki": "^3.8.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.2",
+		"@tailwindcss/postcss": "^4.1.11",
+		"@types/node": "^20.19.8",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"autoprefixer": "^10.4.21",
+		"tailwindcss": "^4.0.0",
+		"typescript": "^5"
+	}
 }

@@ -33,10 +33,16 @@
 }
 
 @layer base {
+	html {
+		overflow-x: hidden;
+		/* Garante que o scroll-behavior seja 'auto' para o elemento html */
+		scroll-behavior: auto;
+	}
 	html,
 	* {
 		scrollbar-width: thin;
 		scrollbar-color: var(--color-gray-300) transparent;
+		/* Removido scroll-behavior: smooth; daqui para evitar conflito */
 	}
 
 	html::-webkit-scrollbar,
@@ -71,6 +77,8 @@
 	body {
 		@apply bg-background text-foreground;
 		font-family: var(--font-editorial);
+		/* Garante que o scroll-behavior seja 'auto' para o elemento body */
+		scroll-behavior: auto;
 	}
 
 	h1,
@@ -136,34 +144,34 @@
 		color: var(--color-gray-500);
 	}
 
-		.prose-content li:has(input[type="checkbox"]) {
-  /* Remove o espaçamento dos itens de tarefa */
-  padding-left: 0;
-}
+	.prose-content li:has(input[type="checkbox"]) {
+		/* Remove o espaçamento dos itens de tarefa */
+		padding-left: 0;
+	}
 
-/* --- LISTAS ORDENADAS --- */
-.prose-content ol {
-  list-style: none; /* Removemos completamente o marcador padrão */
-  counter-reset: list-counter; /* Iniciamos um contador chamado 'list-counter' */
-  padding-left: 0;
-}
+	/* --- LISTAS ORDENADAS --- */
+	.prose-content ol {
+		list-style: none; /* Removemos completamente o marcador padrão */
+		counter-reset: list-counter; /* Iniciamos um contador chamado 'list-counter' */
+		padding-left: 0;
+	}
 
-.prose-content ol li {
-  counter-increment: list-counter; /* A cada <li>, o contador aumenta em 1 */
-  position: relative;
-  padding-left: 1.75rem; 
-}
+	.prose-content ol li {
+		counter-increment: list-counter; /* A cada <li>, o contador aumenta em 1 */
+		position: relative;
+		padding-left: 1.75rem;
+	}
 
-.prose-content ol li::before {
-  content: counter(list-counter) "."; /* Exibe o número do contador + um ponto */
-  position: absolute;
-  left: 0.5em;
-  top: 0;
-   width: 1.75rem; /* Largura da área do número */
-  text-align: left;
-  color: var(--color-gray-500);
-  font-weight: 700;
-}
+	.prose-content ol li::before {
+		content: counter(list-counter) "."; /* Exibe o número do contador + um ponto */
+		position: absolute;
+		left: 0.5em;
+		top: 0;
+		width: 1.75rem; /* Largura da área do número */
+		text-align: left;
+		color: var(--color-gray-500);
+		font-weight: 700;
+	}
 
 	/* --- Blockquotes (Citações) --- */
 	.prose-content blockquote {
@@ -207,7 +215,7 @@
 		margin-bottom: 2rem;
 	}
 	/* --- TABLE --- */
-	.prose-content .table-container{
+	.prose-content .table-container {
 		overflow-x: auto;
 		margin-top: 1em;
 		margin-bottom: 1em;
@@ -217,20 +225,21 @@
 		table-layout: auto;
 		border-collapse: collapse;
 		width: 100%;
-
 	}
 
-	.prose-content thead th {
-		font-weight: bold;
-		color: var(--color-gray-800);
-		background-color: var(--color-gray-200);
-	}
-		.prose-content th,
-		.prose-content td {
+	.prose-content th,
+	.prose-content td {
 		padding: 1em 0.5em;
 		border: 1px solid;
 		border-color: var(--color-gray-400);
 	}
+
+	.prose-content th {
+		font-weight: bold;
+		color: var(--color-gray-800);
+		background-color: var(--color-gray-200);
+	}
+
 	.prose-content tr:hover {
 		background-color: var(--color-gray-150);
 	}

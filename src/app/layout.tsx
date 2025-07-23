@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import dynamic from "next/dynamic";
 
-// --- Fonte para TÍTULOS ---
+const SmoothScrollHandler = dynamic(
+	() => import("../components/SmoothScrollHandler"),
+	{ ssr: false },
+);
+
 const awesome = localFont({
 	src: [
 		{
@@ -28,7 +33,6 @@ const awesome = localFont({
 	],
 	variable: "--font-awesome",
 });
-
 // --- Fonte para TEXTO ---
 const editorial = localFont({
 	src: [
@@ -55,7 +59,6 @@ const editorial = localFont({
 	],
 	variable: "--font-editorial",
 });
-
 export const metadata: Metadata = {
 	title: "Cult of the Magi - Blog",
 	description: "Um blog sobre os mistérios da magia.",
@@ -68,9 +71,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="pt-BR">
-			{/* Aplica as DUAS variáveis de fonte no body */}
 			<body className={`${awesome.variable} ${editorial.variable} antialiased`}>
 				{children}
+				{/* o SmoothScrollHandler só roda no browser */}
+				<SmoothScrollHandler />
 			</body>
 		</html>
 	);
