@@ -20,6 +20,7 @@
 
 	--color-gray-50: oklch(0.045 0 0);
 	--color-gray-100: oklch(0.125 0 0);
+	--color-gray-150: oklch(0.1735 0 0);
 	--color-gray-200: oklch(0.222 0 0);
 	--color-gray-300: oklch(0.318 0 0);
 	--color-gray-400: oklch(0.462 0 0);
@@ -32,6 +33,41 @@
 }
 
 @layer base {
+	html,
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-gray-300) transparent;
+	}
+
+	html::-webkit-scrollbar,
+	*::-webkit-scrollbar {
+		height: 8px;
+		width: 8px;
+	}
+
+	html::-webkit-scrollbar-track,
+	*::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	html::-webkit-scrollbar-button,
+	*::-webkit-scrollbar-button {
+		display: none !important;
+		background-color: transparent !important;
+	}
+
+	html::-webkit-scrollbar-thumb,
+	*::-webkit-scrollbar-thumb {
+		background-color: transparent;
+		border-radius: 2px;
+		border: 2px solid var(--color-gray-300);
+	}
+
+	html::-webkit-scrollbar-thumb:hover,
+	*::-webkit-scrollbar-thumb:hover {
+		background-color: var(--color-gray-500);
+	}
+
 	body {
 		@apply bg-background text-foreground;
 		font-family: var(--font-editorial);
@@ -63,10 +99,8 @@
 }
 
 @layer components {
-	/* --- Estilos para o Conteúdo do Artigo --- */
 	.prose-content {
-		/* Define a cor padrão do texto para todo o artigo */
-		color: #d1d5db; /* um cinza claro (text-gray-300) */
+		color: var(--color-gray-800);
 	}
 
 	/* --- Títulos --- */
@@ -75,48 +109,86 @@
 	.prose-content h4,
 	.prose-content h5,
 	.prose-content h6 {
-		color: #f9fafb; /* um branco-acinzentado (text-gray-50) */
-		margin-bottom: 0.75em; /* Espaçamento abaixo do título */
-		margin-top: 1.5em; /* Espaçamento acima do título */
+		color: var(--color-gray-900);
+		margin-bottom: 0.75em;
+		margin-top: 1.5em;
 	}
 
-	/* --- Listas --- */
-	.prose-content ul,
-	.prose-content ol {
-		padding-left: 1.5rem; /* Recuo da lista */
-		margin-top: 1rem;
-		margin-bottom: 1rem;
+	/* --- Lista NÃO ORDENADA --- */
+	.prose-content ul {
+		list-style: none;
+		padding-left: 0;
 	}
-	.prose-content li {
-		margin-bottom: 0.5rem; /* Espaço entre os itens da lista */
+	.prose-content ul li {
+		position: relative;
+		padding-left: 1.75rem;
 	}
-	/* Estilo dos marcadores da lista */
-	.prose-content ul li::marker {
-		color: #6b7280; /* um cinza médio (text-gray-500) */
+	/* Alteração está aqui: no seletor desta regra */
+	.prose-content ul li:not(:has(input[type="checkbox"]))::before {
+		content: "✦"; /* ◆, ✦, ⬥ */
+		position: absolute;
+		left: 0;
+		top: 0.28em;
+		width: 1.75rem;
+		text-align: center;
+		font-size: 0.7em;
+		line-height: inherit;
+		color: var(--color-gray-500);
 	}
+
+		.prose-content li:has(input[type="checkbox"]) {
+  /* Remove o espaçamento dos itens de tarefa */
+  padding-left: 0;
+}
+
+/* --- LISTAS ORDENADAS --- */
+.prose-content ol {
+  list-style: none; /* Removemos completamente o marcador padrão */
+  counter-reset: list-counter; /* Iniciamos um contador chamado 'list-counter' */
+  padding-left: 0;
+}
+
+.prose-content ol li {
+  counter-increment: list-counter; /* A cada <li>, o contador aumenta em 1 */
+  position: relative;
+  padding-left: 1.75rem; 
+}
+
+.prose-content ol li::before {
+  content: counter(list-counter) "."; /* Exibe o número do contador + um ponto */
+  position: absolute;
+  left: 0.5em;
+  top: 0;
+   width: 1.75rem; /* Largura da área do número */
+  text-align: left;
+  color: var(--color-gray-500);
+  font-weight: 700;
+}
 
 	/* --- Blockquotes (Citações) --- */
 	.prose-content blockquote {
-		margin-left: 1rem;
+		margin-top: 1rem;
 		padding-left: 1rem;
-		border-left: 3px solid #4b5563; /* Borda cinza escura (border-gray-600) */
-		color: #9ca3af; /* Texto da citação um pouco mais escuro (text-gray-400) */
+		border-left: 2px solid var(--color-gray-500); /* Borda cinza escura (border-gray-600) */
 		font-style: italic;
 	}
 
-	/* --- Blocos de Código 
+	/* --- Blocos de Código ---*/
 	.prose-content pre {
-		background-color: var(--color-gray-200); 
-		color: #d1d5db;
 		padding: 1rem;
+		background-color: var(--color-gray-150) !important;
+		border: 1px solid var(--color-gray-200);
 		border-radius: 0.25rem;
-		overflow-x: auto; 
+		overflow-x: auto;
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
 	.prose-content pre code {
+		display: inline-block !important;
+		min-width: 100%;
 		font-family: "Courier New", Courier, monospace;
-	}*/
+		font-size: var(--text-base);
+	}
 
 	/* --- Links --- */
 	.prose-content a {
@@ -133,5 +205,33 @@
 		border-color: var(--color-gray-200); /* Borda cinza escura (border-gray-700) */
 		margin-top: 2rem;
 		margin-bottom: 2rem;
+	}
+	/* --- TABLE --- */
+	.prose-content .table-container{
+		overflow-x: auto;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.prose-content table {
+		table-layout: auto;
+		border-collapse: collapse;
+		width: 100%;
+
+	}
+
+	.prose-content thead th {
+		font-weight: bold;
+		color: var(--color-gray-800);
+		background-color: var(--color-gray-200);
+	}
+		.prose-content th,
+		.prose-content td {
+		padding: 1em 0.5em;
+		border: 1px solid;
+		border-color: var(--color-gray-400);
+	}
+	.prose-content tr:hover {
+		background-color: var(--color-gray-150);
 	}
 }

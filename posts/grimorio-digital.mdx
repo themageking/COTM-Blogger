@@ -52,22 +52,29 @@ Muitas vezes, nos apoiamos na sabedoria daqueles que vieram antes.
 Um mago moderno também escreve seus feitiços em linguagens de programação. Um simples encantamento para exibir uma mensagem pode ser a função `saudacaoArcana()`. Para magias mais complexas, usamos um bloco de código indentado:
 
 ```javascript
-    // Um feitiço para encontrar o equilíbrio entre a luz e a escuridão
-    function encontrarEquilibrio(luz, escuridao) {
-      const energiaTotal = luz + escuridao;
-      if (energiaTotal === 0) {
-        console.log("O Vazio Absoluto. Perigoso, mas poderoso.");
-        return;
-      }
-      
-      const fatorDeLuz = luz / energiaTotal;
-      
-      if (fatorDeLuz > 0.4 && fatorDeLuz < 0.6) {
-        return "Equilíbrio alcançado. O Nexus está estável.";
-      } else {
-        return "Cuidado, as forças estão desbalanceadas!";
-      }
-    }
+/**
+ * Um feitiço para encontrar o equilíbrio entre a luz e a escuridão.
+ *
+ * @param {number} luz A quantidade de energia da luz.
+ * @param {number} escuridao A quantidade de energia da escuridão.
+ * @returns {string | undefined} Uma mensagem sobre o estado do equilíbrio, ou undefined se o vazio for absoluto.
+ */
+function encontrarEquilibrio(luz, escuridao) {
+  const energiaTotal = luz + escuridao;
+
+  if (energiaTotal === 0) {
+    console.log("O Vazio Absoluto. Perigoso, mas poderoso.");
+    return;
+  }
+
+  const fatorDeLuz = luz / energiaTotal;
+
+  if (fatorDeLuz > 0.4 && fatorDeLuz < 0.6) {
+    return "Equilíbrio alcançado. O Nexus está estável.";
+  } else {
+    return "Cuidado, as forças estão desbalanceadas!";
+  }
+}
 ```
 
 ---
@@ -100,12 +107,13 @@ Também podemos abrir um espelho para vislumbrar outras realidades:
 
 Organizar correspondências é fundamental para o mago prático.
 
-| Elemento | Direção | Cor Principal | Ferramenta |
-| :--- | :---: | :---: | ---: |
-| Ar | Leste | Amarelo | Athame |
-| Fogo | Sul | Vermelho | Bastão |
-| Água | Oeste | Azul | Cálice |
-| Terra | Norte | Verde | Pentáculo |
+| Elemento | Direção | Cor Principal | Ferramenta | Planeta Regente | Estação do Ano | Descrição Detalhada do Ritual de Invocação |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Ar | Leste | Amarelo | Athame | Mercúrio | Primavera | O praticante deve voltar-se para o leste e traçar o pentagrama de invocação do ar com o athame consagrado, sentindo os ventos do conhecimento. |
+| Fogo | Sul | Vermelho | Bastão | Marte | Verão | Com o bastão em mãos, o mago invoca a energia primordial do sul, visualizando as chamas da paixão, da coragem e da vontade de criar. |
+| Água | Oeste | Azul | Cálice | Vênus | Outono | Segurando o cálice com água pura de uma fonte natural, o praticante se conecta com as emoções profundas e a intuição fluida do oeste. |
+| Terra | Norte | Verde | Pentáculo | Saturno | Inverno | O pentáculo é posicionado firmemente ao norte para invocar a estabilidade, a prosperidade, a manifestação física e a solidez do elemento terra. |
+| Éter | Centro | Violeta | Cristal | Sol | Todas | O quinto elemento, que unifica todos os outros, é invocado no centro do círculo para trazer equilíbrio espiritual e conexão com o divino. |
 
 ## Segredos e Conclusões
 

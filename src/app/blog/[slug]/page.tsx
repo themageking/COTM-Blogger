@@ -6,6 +6,21 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 
+const ResponsiveTable = ({
+	children,
+	...props
+}: React.ComponentProps<"table">) => {
+	return (
+		<div className="table-container">
+			<table {...props}>{children}</table>
+		</div>
+	);
+};
+
+const components = {
+	table: ResponsiveTable,
+};
+
 export default async function PostPage({
 	params: { slug },
 }: {
@@ -21,14 +36,12 @@ export default async function PostPage({
 			date: string;
 		}>({
 			source: fileContents,
+			components: components,
 			options: {
 				parseFrontmatter: true,
 				mdxOptions: {
 					remarkPlugins: [remarkGfm],
-					rehypePlugins: [
-						[rehypePrettyCode,
-						{ theme: "slack-dark" }],
-					],
+					rehypePlugins: [[rehypePrettyCode, { theme: "slack-dark" }]],
 				},
 			},
 		});
