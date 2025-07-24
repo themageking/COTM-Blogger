@@ -7,7 +7,7 @@ const SmoothScrollHandler: React.FC = () => {
 	const currentScrollTop = useRef(0);
 
 	const SMOOTHING_FACTOR = 0.1;
-	const SCROLL_SPEED_LIMIT = 50;
+	const SCROLL_SPEED_LIMIT = 100;
 
 	const animateScroll = useCallback(() => {
 		const el = document.documentElement;

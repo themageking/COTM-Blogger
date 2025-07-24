@@ -5,18 +5,24 @@
 	--color-background: oklch(0.045 0 0);
 	--color-foreground: oklch(0.891 0 0);
 
-	--text-xs: 0.75rem;
-	--text-xs--line-height: 1.333333;
-	--text-base: 1rem;
-	--text-base--line-height: 1.5;
-	--text-lg: 1.5rem;
-	--text-lg--line-height: 1.333333;
-	--text-xl: 2.25rem;
-	--text-xl--line-height: 1.222222;
-	--text-2xl: 3.5rem;
-	--text-2xl--line-height: 1.142857;
-	--text-3xl: 4.5rem;
-	--text-3xl--line-height: 1.111111;
+	/* Novas variáveis de tipografia baseadas na sua tabela */
+	--text-small: 0.75rem; /* 12px */
+	--text-small--line-height: 1.333333; /* 16px / 12px */
+
+	--text-p: 1rem; /* 16px */
+	--text-p--line-height: 1.5; /* 24px / 16px */
+
+	--text-h3: 1.5rem; /* 24px */
+	--text-h3--line-height: 1.333333; /* 32px / 24px */
+
+	--text-h2: 2.25rem; /* 36px */
+	--text-h2--line-height: 1.222222; /* 44px / 36px */
+
+	--text-h1: 3.5rem; /* 56px */
+	--text-h1--line-height: 1.142857; /* 64px / 56px */
+
+	--text-display: 4.5rem; /* 72px */
+	--text-display--line-height: 1.111111; /* 80px / 72px */
 
 	--color-gray-50: oklch(0.045 0 0);
 	--color-gray-100: oklch(0.125 0 0);
@@ -92,17 +98,34 @@
 		@apply font-bold mt-8 mb-4;
 	}
 
+	/* Aplicação das novas proporções */
 	h1 {
-		@apply text-2xl;
+		font-size: var(--text-h1);
+		line-height: var(--text-h1--line-height);
 	}
 	h2 {
-		@apply text-xl;
+		font-size: var(--text-h2);
+		line-height: var(--text-h2--line-height);
 	}
+
 	h3 {
-		@apply text-lg;
+		font-size: var(--text-h3);
+		line-height: var(--text-h3--line-height);
 	}
 	p {
-		@apply text-base;
+		font-size: var(--text-p);
+		line-height: var(--text-p--line-height);
+	}
+	small {
+		/* Adicionado o seletor para <small> */
+		font-size: var(--text-small);
+		line-height: var(--text-small--line-height);
+	}
+	/* Para o display/hero, você pode criar uma classe específica no seu JSX ou adicionar aqui
+	   se for um elemento HTML específico. Exemplo para uma classe: */
+	.text-display-hero {
+		font-size: var(--text-display);
+		line-height: var(--text-display--line-height);
 	}
 }
 
