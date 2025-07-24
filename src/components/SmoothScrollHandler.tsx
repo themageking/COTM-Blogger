@@ -1,3 +1,4 @@
+// src/components/SmoothScrollHandler.tsx
 "use client";
 import { useCallback, useEffect, useRef } from "react";
 
